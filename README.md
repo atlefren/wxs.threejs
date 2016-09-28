@@ -21,12 +21,13 @@ And then
 ```
 import Wxs3Map from 'wxs3map';
 ```
->>>>>>> refactor
+
 
 If you want to include this as a "traditional" js package, add the 
 
 ```build/Wxs3Map.min.js```
-to your project, as well as 
+
+to your project, as well as
 
 ```build/trackball.js```
 
