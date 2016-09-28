@@ -1,35 +1,45 @@
-wxs.threejs
-===========
+Wxs3Map
+=======
 
-*** WARNING ***
-Major reworking of structure. 
-Some old functionality is temporarily gone.
+NOTE: This is a fork of wxs.threejs, for the original version please refer to [the original reposityory](https://github.com/jarped/wxs.threejs).
 
-Realtime consumption of wxs-services
+Wxs3Map is a lightweight JavaScript library build on top of the great [three.js](https://threejs.org) library.
 
+The main purpose is to facilitate showing small 3d-blocks of the world, using the OGC services WCS for elevation data and WMS/WMTS for textures (maps or sattelite/aerial photos).
 
-RawGit:
+Usage
+-----
 
-http://rawgit.com/jarped/wxs.threejs/master/example/frames.html
+The recommended way to use wxs.threejs2 is by some tool like Webpack or browserify:
 
+```
+npm install wxs3map --save
+```
 
-Additional information:
+And then
 
-http://labs.kartverket.no/wcs-i-threejs/
+```
+import Wxs3Map from 'wxs3map';
+```
+>>>>>>> refactor
 
+If you want to include this as a "traditional" js package, add the 
 
-Example-calls to the WCS:
+```build/Wxs3Map.min.js```
+to your project, as well as 
 
-http://labs.kartverket.no/wcs-i-quantum-gis/
+```build/trackball.js```
 
+and the libraries:
 
-The following licenses apply:
+- three.js
+- underscore
+- proj4js
 
-threejs: https://github.com/mrdoob/three.js/blob/master/LICENSE
+Development
+-----------
 
-tiff-js: https://github.com/GPHemsley/tiff-js/blob/master/LICENSE
+1. ```npm install```
+2. ```npm run dev-server```
+3. Navigate the browser to http://localhost:8080/demos/
 
-openLayers: https://github.com/openlayers/openlayers/blob/master/license.txt
-
-
-The solution uses web services from Kartverket which are subject to their own licenses (mostly CC-BY 3.0 Norway) and the Norwegian Geodata law. See http://kartverket.no/Kart/Kartverksted/Lisens/ for the license terms and http://kartverket.no/Kart/Kartverksted/ for details on the web services.

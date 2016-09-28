@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style type="text/css">
+            html, body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                overflow:hidden;
+            }
+
+            #threedmap {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #ccccff;
+            }   
+        </style>
+        <title>WXS.three</title>
+    </head>
+    <body>
+        <div id="threedmap"></div>
+        <!--<script type="text/javascript" src="../bundles/Wxs3Map.bundle.js"></script>-->
+
+        <script type="text/javascript" src="../node_modules/proj4/dist/proj4.js"></script>
+        <script type="text/javascript" src="../node_modules/three/build/three.min.js"></script>
+        <script type="text/javascript" src="../build/trackball.js"></script>
+        <script type="text/javascript" src="../node_modules/underscore/underscore-min.js"></script>
+        <script type="text/javascript" src="../build/Wxs3Map.min.js"></script>
+        <script type="text/javascript">
+            var config2 = {
+                div: 'threedmap',
+                bbox: '7.856598,62.333035,8.583069,62.559503',
+                wireframe: false,
+                texture: {
+                    wmsUrl: 'http://openwms.statkart.no/skwms1/wms.topo2',
+                    wmsLayers: 'topo2_WMS'
+                },
+                terrain: {
+                    wcsUrl: 'http://wms.geonorge.no/skwms1/wcs.dtm',
+                    coverage: 'land_utm33_10m'
+                }
+            };
+            var threeDMap = window.Wxs3Map.default(config2);
+
+
+            threeDMap.on('onTerrainLoadStart', console.log.bind(console));
+            threeDMap.on('onTextureLoadStart', console.log.bind(console));
+
+            threeDMap.on('onTerrainLoadEnd', console.log.bind(console));
+            threeDMap.on('onTextureLoadEnd', console.log.bind(console));
+
+            //threeDMap.init();
+
+            var geom = {
+        "type": "LineString",
+        "coordinates": [
+          [
+            8.493118286132812,
+            62.40277754268329
+          ],
+          [
+            8.472518920898438,
+            62.39896021172853
+          ],
+          [
+            8.44024658203125,
+            62.40023270943658
+          ],
+          [
+            8.41552734375,
+            62.40214135464228
+          ],
+          [
+            8.388748168945312,
+            62.40659438715488
+          ],
+          [
+            8.372268676757812,
+            62.40754852226505
+          ],
+          [
+            8.351669311523438,
+            62.41390864610177
+          ],
+          [
+            8.338623046874998,
+            62.41772407192144
+          ],
+          [
+            8.3221435546875,
+            62.41994951240088
+          ],
+          [
+            8.309783935546875,
+            62.41518050874517
+          ],
+          [
+            8.300857543945312,
+            62.4034137172109
+          ],
+          [
+            8.289871215820312,
+            62.391642300779345
+          ],
+          [
+            8.279571533203125,
+            62.37540925153661
+          ],
+          [
+            8.271331787109375,
+            62.369359397043496
+          ],
+          [
+            8.256912231445312,
+            62.36139720255446
+          ],
+          [
+            8.245925903320312,
+            62.363626830043756
+          ],
+          [
+            8.241119384765625,
+            62.370314718368256
+          ],
+          [
+            8.2342529296875,
+            62.374772482221125
+          ],
+          [
+            8.2342529296875,
+            62.37891124106466
+          ],
+          [
+            8.232192993164062,
+            62.38941475568191
+          ],
+          [
+            8.22601318359375,
+            62.40055082541711
+          ],
+          [
+            8.2232666015625,
+            62.40627633536211
+          ],
+          [
+            8.225326538085938,
+            62.41200075081284
+          ],
+          [
+            8.230133056640625,
+            62.42090322195164
+          ],
+          [
+            8.23974609375,
+            62.42726050897744
+          ]
+        ]
+      };
+
+            threeDMap.addLine(geom);
+            //*/
+        </script>
+    </body>
+</html>
