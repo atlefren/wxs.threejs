@@ -128,3 +128,5 @@ function Wxs3Map(config) {
 }
 
 window.Wxs3Map = Wxs3Map;
+
+export default Wxs3Map;
