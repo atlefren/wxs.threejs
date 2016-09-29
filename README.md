@@ -19,13 +19,7 @@ And then
 ```import Wxs3Map from 'wxs3map';```
 
 
-If you want to include this as a "traditional" js package, add the 
-
-```build/Wxs3Map.min.js```
-
-to your project, as well as
-
-```build/trackball.js```
+If you want to include this as a "traditional" js package, add the ```build/Wxs3Map.min.js``` to your project, as well as ```build/trackball.js```.
 
 and the libraries:
 
