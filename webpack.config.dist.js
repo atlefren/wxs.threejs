@@ -11,7 +11,7 @@ module.exports = {
         underscore: '_',
         'proj4/lib/index': 'proj4',
         three: 'THREE',
-        "three.trackball": 'TrackballControls'
+        'three.trackball': 'TrackballControls'
     },
     output: {
         path: path.join(__dirname, 'build'),
@@ -38,6 +38,6 @@ module.exports = {
         ]
     },
     plugins: [
-        //new UglifyJsPlugin({minimize: true})
+        new UglifyJsPlugin({minimize: true})
     ]
 };

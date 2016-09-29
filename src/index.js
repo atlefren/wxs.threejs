@@ -9,8 +9,8 @@ import Profiles from './Profiles';
 import Envelope from './Envelope';
 
 var defaults = {
-    div: 'map',
-    bbox: '7.856598,62.333035,8.583069,62.559503',
+    div: null,
+    bbox: null,
     bboxCrs: 'EPSG:4326',
     wireframe: false,
     zMult: 1,
