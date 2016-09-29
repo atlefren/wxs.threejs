@@ -1,6 +1,6 @@
 {
   "name": "wxs3map",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "dist/index.js",
   "directories": {},
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jarped/wxs.threejs.git"
+    "url": "git+https://github.com/atlefren/wxs3map.git"
   },
   "contributors": [
     {"name": "Jarle Pedersen"},
