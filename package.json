@@ -7,13 +7,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "webpack-dev-server --progress --colors",
-    "build": "babel --presets es2015 src/ --out-dir dist/ && webpack --config webpack.config.dist.js"
+    "build": "babel --presets es2015 src/ --out-dir dist/ && webpack --config webpack.config.dist.js",
+    "clean": "rimraf dist && rimraf build",
+    "prepublish": "npm run clean && npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jarped/wxs.threejs.git"
   },
-  "author": "",
+  "contributors": [
+    {"name": "Jarle Pedersen"},
+    {"name": "Sverre Iversen"},
+    {"name": "Atle Frenvik Sveen"}
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/atlefren/wxs3map/issues"
@@ -30,6 +36,7 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
     "json-loader": "^0.5.4",
+    "rimraf": "^2.5.4",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
   }
